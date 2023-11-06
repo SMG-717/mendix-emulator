@@ -3,7 +3,8 @@
         "libs/**/*.jar"
     ],
     "java.project.resourceFilters": [
-        "./emulator.jar"
+        "out/*"
     ],
+    "java.project.exportJar.targetPath": "${workspaceFolder}/out/${workspaceFolderBasename}.jar",
     "java.compile.nullAnalysis.mode": "disabled"
 }
