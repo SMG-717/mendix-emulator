@@ -43,13 +43,13 @@ public class IMetaObject {
     public java.util.List<? extends IDataValidation> getDataValidations() {
         return null;
     }
-    public java.util.List<? extends IDataValidation> getDataValidationsByMember​(java.lang.String memberName) {
+    public java.util.List<? extends IDataValidation> getDataValidationsByMember(java.lang.String memberName) {
         return null;
     }
-    public IMetaAssociation getDeclaredMetaAssociationChild​(java.lang.String name) {
+    public IMetaAssociation getDeclaredMetaAssociationChild(java.lang.String name) {
         return null;
     }
-    public IMetaAssociation getDeclaredMetaAssociationParent​(java.lang.String name) {
+    public IMetaAssociation getDeclaredMetaAssociationParent(java.lang.String name) {
         return null;
     }
     public java.util.Collection<? extends IMetaAssociation> getDeclaredMetaAssociationsChild() {
@@ -58,7 +58,7 @@ public class IMetaObject {
     public java.util.Collection<? extends IMetaAssociation> getDeclaredMetaAssociationsParent() {
         return null;
     }
-    public IMetaPrimitive getDeclaredMetaPrimitive​(java.lang.String name) {
+    public IMetaPrimitive getDeclaredMetaPrimitive(java.lang.String name) {
         return null;
     }
     public java.util.Collection<? extends IMetaPrimitive> getDeclaredMetaPrimitives() {
@@ -70,10 +70,10 @@ public class IMetaObject {
     public java.util.List<? extends IMetaObjectIndex> getIndices() {
         return null;
     }
-    public IMetaAssociation getMetaAssociationChild​(java.lang.String name) {
+    public IMetaAssociation getMetaAssociationChild(java.lang.String name) {
         return null;
     }
-    public IMetaAssociation getMetaAssociationParent​(java.lang.String name) {
+    public IMetaAssociation getMetaAssociationParent(java.lang.String name) {
         return null;
     }
     public java.util.Collection<? extends IMetaAssociation> getMetaAssociationsChild() {
@@ -85,13 +85,13 @@ public class IMetaObject {
     public java.util.List<? extends IMetaObjectAccess> getMetaObjectAccesses() {
         return null;
     }
-    public java.util.List<? extends IMetaObjectAccess> getMetaObjectAccessesWithoutXPath​(IContext context) {
+    public java.util.List<? extends IMetaObjectAccess> getMetaObjectAccessesWithoutXPath(IContext context) {
         return null;
     }
-    public java.util.List<? extends IMetaObjectAccess> getMetaObjectAccessesWithXPath​(IContext context) {
+    public java.util.List<? extends IMetaObjectAccess> getMetaObjectAccessesWithXPath(IContext context) {
         return null;
     }
-    public IMetaPrimitive getMetaPrimitive​(java.lang.String name) {
+    public IMetaPrimitive getMetaPrimitive(java.lang.String name) {
         return null;
     }
     public java.util.Collection<? extends IMetaPrimitive> getMetaPrimitives() {

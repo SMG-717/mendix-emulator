@@ -34,17 +34,17 @@ public final class Core {
     public static void addRequestHandler(java.lang.String path, RequestHandler requestHandler) {}
     public static void addUserAction(java.lang.Class<? extends UserAction<?>> userActionClass) { }
     public static void addWebSocketEndpoint(java.lang.String path, javax.websocket.Endpoint endpoint) { }
-    public static boolean authenticate(IContext context, IUser user, java.lang.String password) {
+    public static boolean authenticate(IContext context, IUser user, java.lang.String password) throws CoreException {
         return false;
     }
     public static void buildException(java.lang.StringBuilder trace, java.lang.Throwable throwable) { }
-    public static boolean change(IContext context, IMendixObject object, java.util.Map<java.lang.String,java.lang.String> changes) {
+    public static boolean change(IContext context, IMendixObject object, java.util.Map<java.lang.String,java.lang.String> changes) throws CoreException {
         return false;
      }
     public static java.util.concurrent.Future<java.lang.Boolean> changeAsync(IContext context, IMendixObject obj, java.util.Map<java.lang.String,java.lang.String> changes) {
         return null;
     }
-    public static IMendixObject commit(IContext context, IMendixObject object) {
+    public static IMendixObject commit(IContext context, IMendixObject object) throws CoreException {
         return null;
     }
     public static java.util.List<IMendixObject> commit(IContext context, java.util.List<IMendixObject> objects) {
@@ -110,25 +110,25 @@ public final class Core {
     public static java.lang.Object evaluateExpression(IContext context, java.util.Map<java.lang.String,java.lang.Object> variables, java.lang.String expression) {
         return null;
     }
-    public static <R> R execute(IContext context, java.lang.String microflowName, boolean executeInTransaction, java.util.Map<java.lang.String,java.lang.Object> params) {
+    public static <R> R execute(IContext context, java.lang.String microflowName, boolean executeInTransaction, java.util.Map<java.lang.String,java.lang.Object> params) throws CoreException {
         return null;
     }
-    public static <R> R execute(IContext context, java.lang.String name, java.lang.Object... params) {
+    public static <R> R execute(IContext context, java.lang.String name, java.lang.Object... params) throws CoreException {
         return null;
     }
-    public static <R> R execute(IContext context, java.lang.String microflowName, java.util.Map<java.lang.String,java.lang.Object> params) {
+    public static <R> R execute(IContext context, java.lang.String microflowName, java.util.Map<java.lang.String,java.lang.Object> params) throws CoreException {
         return null;
     }
     public static <T extends CoreAction<R>, R> java.util.concurrent.Future<R> execute(T action) {
         return null;
     }
-    public static <R> java.util.concurrent.Future<R> executeAsync(IContext context, java.lang.String microflowName, boolean executeInTransaction, java.util.Map<java.lang.String,java.lang.Object> params) {
+    public static <R> java.util.concurrent.Future<R> executeAsync(IContext context, java.lang.String microflowName, boolean executeInTransaction, java.util.Map<java.lang.String,java.lang.Object> params) throws CoreException {
         return null;
     }
-    public static <R> java.util.concurrent.Future<R> executeAsync(IContext context, java.lang.String actionName, java.lang.Object... params) {
+    public static <R> java.util.concurrent.Future<R> executeAsync(IContext context, java.lang.String actionName, java.lang.Object... params) throws CoreException {
         return null;
     }
-    public static <T extends CoreAction<R>, R> R executeSync(T action) {
+    public static <T extends CoreAction<R>, R> R executeSync(T action) throws CoreException {
         return null;
     }
     public static <T extends CoreAction<R>, R> void executeVoid(T action) { }
@@ -210,7 +210,7 @@ public final class Core {
     public static com.mendix.logging.ILogNode getLogger(java.lang.String name)  {
         return null;
     }
-    public static int getMaximumNumberConcurrentUsers() {
+    public static int getMaximumNumberConcurrentUsers() throws CoreException {
         return 0;
     }
     public static IMetaAssociation getMetaAssociation(java.lang.String association) {
@@ -261,7 +261,7 @@ public final class Core {
     public static java.util.List<java.lang.String> getSubtypesOf(java.lang.String objectType) {
         return null;
     }
-    public static IUser getUser(IContext context, java.lang.String userName) {
+    public static IUser getUser(IContext context, java.lang.String userName) throws CoreException {
         return null;
     }
     public static java.lang.String getXASId() {
@@ -271,10 +271,10 @@ public final class Core {
         return null;
     }
     public static void initialize(com.mendix.core.internal.ICore core, Http http, Integration integration, DataStorage dataStorage, Metrics metrics) { }
-    public static ISession initializeGuestSession() {
+    public static ISession initializeGuestSession() throws CoreException {
         return null;
     }
-    public static ISession initializeSession(IUser user, java.lang.String currentSessionId) {
+    public static ISession initializeSession(IUser user, java.lang.String currentSessionId) throws CoreException {
         return null;
     }
     public static IMendixObject instantiate(IContext context, java.lang.String objectType) {
@@ -298,16 +298,16 @@ public final class Core {
     public static boolean isSubClassOf(java.lang.String superClass, java.lang.String type) {
         return false;
      }
-    public static ISession login(java.lang.String userName, java.lang.String password) {
+    public static ISession login(java.lang.String userName, java.lang.String password) throws CoreException {
         return null;
     }
-    public static ISession login(java.lang.String userName, java.lang.String password, com.mendix.m2ee.api.IMxRuntimeRequest request)  {
+    public static ISession login(java.lang.String userName, java.lang.String password, com.mendix.m2ee.api.IMxRuntimeRequest request) throws CoreException {
         return null;
     }
-    public static ISession login(java.lang.String userName, java.lang.String password, java.lang.String currentSessionId) {
+    public static ISession login(java.lang.String userName, java.lang.String password, java.lang.String currentSessionId) throws CoreException {
         return null;
     }
-    public static ISession login(java.util.Map<java.lang.String,? extends java.lang.Object> params) {
+    public static ISession login(java.util.Map<java.lang.String,? extends java.lang.Object> params) throws CoreException {
         return null;
     }
     public static void logout(ISession session) { }
@@ -340,10 +340,10 @@ public final class Core {
     public static java.util.concurrent.Future<IMendixObject> retrieveIdAsync(IContext context, IMendixIdentifier id) {
         return null;
     }
-    public static java.util.List<IMendixObject> retrieveIdList(IContext context, java.util.List<IMendixIdentifier> ids) {
+    public static java.util.List<IMendixObject> retrieveIdList(IContext context, java.util.List<IMendixIdentifier> ids) throws CoreException {
         return null;
     }
-    public static java.util.List<IMendixObject> retrieveIdList(IContext context, java.util.List<IMendixIdentifier> ids, int amount, int offset, java.util.Map<java.lang.String,java.lang.String> sort) {
+    public static java.util.List<IMendixObject> retrieveIdList(IContext context, java.util.List<IMendixIdentifier> ids, int amount, int offset, java.util.Map<java.lang.String,java.lang.String> sort) throws CoreException {
         return null;
     }
     public static java.util.concurrent.Future<java.util.List<IMendixObject>> retrieveIdListAsync(IContext context, java.util.List<IMendixIdentifier> ids) {
@@ -412,7 +412,7 @@ public final class Core {
     public static IDataTable retrieveXPathSchemaRaw(IContext context, java.lang.String xpathQuery, boolean shouldRetrieveCount, IRetrievalSchema retrievalSchema) throws CoreException {
         return null;
     }
-    public static IMendixObject rollback(IContext context, IMendixObject object) {
+    public static IMendixObject rollback(IContext context, IMendixObject object) throws CoreException {
         return null;
     }
     public static java.util.concurrent.Future<IMendixObject> rollbackAsync(IContext context, IMendixObject object) {
