@@ -12,6 +12,6 @@ public abstract class UserAction<R> extends CoreAction<R> {
         return null;
     }
 
-    public abstract R executeAction() throws Exception ;
+    public abstract R executeAction() throws Exception;
 
 }
