@@ -1,31 +1,39 @@
 package com.mendix.systemwideinterfaces.core;
 
-import java.util.List;
-import java.util.Map;
-
+import com.mendix.core.objectmanagement.member.MendixObjectReference;
+import com.mendix.core.objectmanagement.member.MendixObjectReferenceSet;
 import com.mendix.systemwideinterfaces.core.meta.IMetaObject;
 
 public interface IMendixObject {
 
-    public void setValue(IContext context, String memberName, Object memberValue);
-    public <T> T getValue(IContext context, String memberName);
-    public String getType();
-    public Map<String, ? extends IMendixObjectMember<?>> getMembers(IContext c);
-    public IMendixObjectMember<?> getMember(IContext c, String name);
-    public boolean isNew();
-    public void clear();
-    public boolean isChanged();
-    public boolean hasMember(String name);
-    public IMendixIdentifier getId();
-    public IMetaObject getMetaObject();
-    public List<? extends IMendixObjectMember<?>> getPrimitives(IContext context);
-    public boolean hasChangedByAttribute();
-    public boolean hasOwnerAttribute();
-    public IMendixIdentifier getChangedBy(IContext c);
-    public IMendixIdentifier getOwner(IContext c);
-    public ObjectState getState();
+    IMendixIdentifier getChangedBy(IContext context);
+    java.util.Date getChangedDate(IContext context);
+    java.util.List<? extends IMendixObjectMember<?>> getChangedMembers(IContext context);
+    java.util.Date getCreatedDate(IContext context);
+    IMendixIdentifier getId();
+    IMendixObjectMember<?> getMember(IContext context, String memberName);
+    java.util.Map<String,? extends IMendixObjectMember<?>> getMembers(IContext context);
+    IMetaObject getMetaObject();
+    IMendixIdentifier getOwner(IContext context);
+    java.util.List<? extends IMendixObjectMember<?>> getPrimitives(IContext context);
+    java.util.List<? extends MendixObjectReference> getReferences(IContext context);
+    java.util.List<? extends MendixObjectReferenceSet> getReferenceSets(IContext context);
+    IMendixObject.ObjectState getState();
+    String getType();
+    <T> T getValue(IContext context, String memberName);
+    java.util.Map<String,? extends IMendixObjectMember<?>> getVirtualMembers(IContext context);
+    boolean hasChangedByAttribute();
+    boolean hasChangedDateAttribute();
+    boolean hasCreatedDateAttribute();
+    boolean hasDeleteRights(IContext context);
+    boolean hasMember(String memberName);
+    boolean hasNullValues(IContext context);
+    boolean hasOwnerAttribute();
+    boolean isChanged();
+    boolean isNew();
+    boolean isVirtual(IContext context, String name);
+    void setValue(IContext context, String memberName, Object value);
 
-    // public String toCompactString();
     public enum ObjectState {
         NORMAL, INSTANTIATED
     }

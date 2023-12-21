@@ -183,6 +183,7 @@ public class XMLParserConfiguration extends ParserConfiguration {
      * @return The existing configuration will not be modified. A new configuration is returned.
      */
     @Override
+    @SuppressWarnings({"unchecked"})
     public XMLParserConfiguration withKeepStrings(final boolean newVal) {
         return super.withKeepStrings(newVal);
     }
@@ -300,6 +301,7 @@ public class XMLParserConfiguration extends ParserConfiguration {
      * @return The existing configuration will not be modified. A new configuration is returned.
      */
     @Override
+    @SuppressWarnings({"unchecked"})
     public XMLParserConfiguration withMaxNestingDepth(int maxNestingDepth) {
         return super.withMaxNestingDepth(maxNestingDepth);
     }
